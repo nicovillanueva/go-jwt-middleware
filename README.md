@@ -4,6 +4,8 @@ A middleware that will check that a [JWT](http://jwt.io/) is sent on the `Author
 
 This module lets you authenticate HTTP requests using JWT tokens in your Go Programming Language applications. JWTs are typically used to protect API endpoints, and are often issued using OpenID Connect.
 
+Compatible with Go 1.11 Modules
+
 ## Key Features
 
 * Ability to **check the `Authorization` header for a JWT**

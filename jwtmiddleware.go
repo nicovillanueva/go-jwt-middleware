@@ -4,10 +4,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/dgrijalva/jwt-go"
 	"log"
 	"net/http"
 	"strings"
+
+	jwt "github.com/vladimiroff/jwt-go/v3"
 )
 
 // A function called whenever an error is encountered

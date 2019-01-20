@@ -4,7 +4,9 @@ A middleware that will check that a [JWT](http://jwt.io/) is sent on the `Author
 
 This module lets you authenticate HTTP requests using JWT tokens in your Go Programming Language applications. JWTs are typically used to protect API endpoints, and are often issued using OpenID Connect.
 
-Compatible with Go 1.11 Modules
+## Go Modules
+NOTE: This repository is basically a mirror of `github.com/auth0/go-jwt-middleware` with the only exception of being compatible with Go Modules. This in turn implies the change from `github.com/dgrijalva/jwt-go` to `github.com/vladimiroff/jwt-go/v3`.
+For any issues, refer to the original, auth0's repo.
 
 ## Key Features
 
@@ -14,7 +16,7 @@ Compatible with Go 1.11 Modules
 ## Installing
 
 ````bash
-go get github.com/auth0/go-jwt-middleware
+go get github.com/nicovillanueva/go-jwt-middleware
 ````
 
 ## Using it
@@ -29,8 +31,8 @@ import (
   "fmt"
   "net/http"
 
-  "github.com/auth0/go-jwt-middleware"
-  "github.com/dgrijalva/jwt-go"
+  jwtmiddleware "github.com/nicovillanueva/go-jwt-middleware"
+  jwt "github.com/vladimiroff/jwt-go/v3"
   "github.com/gorilla/context"
 )
 
@@ -70,9 +72,9 @@ import (
   "fmt"
   "net/http"
 
-  "github.com/auth0/go-jwt-middleware"
+  jwtmiddleware "github.com/nicovillanueva/go-jwt-middleware"
   "github.com/codegangsta/negroni"
-  "github.com/dgrijalva/jwt-go"
+  jwt "github.com/vladimiroff/jwt-go/v3"
   "github.com/gorilla/mux"
 )
 
@@ -177,7 +179,7 @@ jwtmiddleware.New(jwtmiddleware.Options{
 
 ## Examples
 
-You can check out working examples in the [examples folder](https://github.com/auth0/go-jwt-middleware/tree/master/examples)
+You can check out working examples in the [examples folder](https://github.com/nicovillanueva/go-jwt-middleware/tree/master/examples)
 
 
 ## What is Auth0?
